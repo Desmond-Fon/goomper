@@ -4,6 +4,7 @@ import aside from '../../assets/aside.png'
 import footer from '../../assets/footer.png'
 import foot from '../../assets/foot.png'
 import hero from '../../assets/hero.png'
+import heroMob from '../../assets/heroMob.png'
 import dex from '../../assets/dex.png'
 import heroSmall from '../../assets/heroSmal.png'
 // import copy from '../../assets/copy.png'
@@ -60,7 +61,10 @@ const Landing = () => {
                 <img src={shadow} alt="" className='hidden lg:block lg:w-auto' />
                 </Parallax> */}
                 <Parallax speed={isDesktop ? -30 : -10}>
-                    <img src={hero} alt="" className='' />
+                    <img src={heroMob} alt="" className='lg:hidden' />
+                </Parallax>
+                <Parallax speed={isDesktop ? -30 : -10}>
+                    <img src={hero} alt="" className='hidden lg:block' />
                 </Parallax>
                 <button className="border-[2px] bottom-[15%] lg:bottom-16 absolute border-black rounded-[10px] translate transform origin-center rotate-[-5deg] py-[5px] lg:py-[10px] px-[10px] lg:px-[40px] lg:text-[20px] bg-white transition-transform duration-300 ease-in-out scale-100 hover:scale-110">CA: wedq726w8asg2ubjdwr4q3e9wiq</button>
             </div>
@@ -140,7 +144,7 @@ const Landing = () => {
             <div className="flex-col lg:flex-row flex justify-between lg:items-end h-full  w-full">
                 <img src={footer} alt="" className='h-full hidden lg:block lg:w-[40%]' />
                 <div className="flex flex-col lg:pr-[160px] lg:pt-[50px] h-full items-center lg:items-start justify-center lg:justify-start  gap-[30px] lg:gap-[30px]">
-                    <h1 className='text-[40px] lg:text-[76px] tracking-widest'>JOIN THE <br />COMMUNITY </h1>
+                    <h1 className='text-[40px] text-center lg:text-left lg:text-[76px] tracking-widest'>JOIN THE <br />COMMUNITY </h1>
                     <div className="flex w-full flex-col lg:flex-row justify-center items-center gap-[20px] pb-[20px] lg:pb-0 lg:gap-[50px]">
                         <div className="flex justify-center items-center gap-3">
                             <img src={tg} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" />
@@ -149,7 +153,7 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-end items-end"><img src={foot} className="-mb-[5px]" alt="" /></div>
+                <div className="flex justify-center lg:justify-end items-center lg:items-end"><img src={foot} className="-mb-[5px]" alt="" /></div>
             </div>
         </motion.div>
 
