@@ -44,7 +44,7 @@ const Landing = () => {
         {/* <img src={shadow} className="absolute origin-center" alt="" /> */}
         {/* <div className="flex relative z-[2000] justify-center items-center pt-[3%]"> */}
         <div className='overflow-hidden'>
-            <img src={heroSmall} className='absolute hidden lg:block -bottom-3 left-0' alt="" />
+            <img src={heroSmall} className='absolute hidden lg:block bottom-1 left-0' alt="" />
             <div className="flex justify-between items-center pt-[3%] px-[3%]">
                 <button className="border-[2px] border-black rounded-[5px] py-[6px] lg:py-[10px] px-[20px] lg:px-[50px] font-sigmar text-black bg-secondary transform transition-transform duration-300 ease-in-out scale-100 hover:scale-110">BUY NOW</button>
                 <div className='flex justify-end items-center gap-1 lg:gap-4'>
@@ -76,11 +76,11 @@ const Landing = () => {
                     opacity: inView3 ? 1 : 0,
                     x: inView3 ? 0 : 100,
                 }}
-                transition={{ duration: 0.5 }} className="w-full lg:w-[40%] flex flex-col items-start gap-[30px] lg:pl-[8%] pb-[50px] lg:pb-0">
+                transition={{ duration: 0.5 }} className="w-full lg:w-[40%] flex flex-col lg:items-start gap-[30px] lg:pl-[8%] pb-[50px] lg:pb-0">
                 <h1 className="text-[50px] lg:text-[70px] font-bold text-center text-black transform rotate-[-3deg]">TOKENOMICS</h1>
 
-                <div className='flex justify-start items-center lg:items-start'>
-                    <p className='text-[36px] text-center lg:text-left'>LP: BURNED FOREVER <br />
+                <div className='flex justify-center lg:justify-start items-center lg:items-start'>
+                    <p className='text-[28px] lg:text-[36px] text-center lg:text-left'>LP: BURNED FOREVER <br />
                         TAX: 0/0 <br />
                         TICKER: $GOOMPER <br />
                         TEAM: 10% <br />
