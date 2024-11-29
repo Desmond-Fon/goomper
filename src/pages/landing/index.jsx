@@ -44,7 +44,7 @@ const Landing = () => {
         {/* <img src={shadow} className="absolute origin-center" alt="" /> */}
         {/* <div className="flex relative z-[2000] justify-center items-center pt-[3%]"> */}
         <div className='overflow-hidden'>
-            <img src={heroSmall} className='absolute -bottom-3 left-0' alt="" />
+            <img src={heroSmall} className='absolute hidden lg:block -bottom-3 left-0' alt="" />
             <div className="flex justify-between items-center pt-[3%] px-[3%]">
                 <button className="border-[2px] border-black rounded-[5px] py-[6px] lg:py-[10px] px-[20px] lg:px-[50px] font-sigmar text-black bg-secondary transform transition-transform duration-300 ease-in-out scale-100 hover:scale-110">BUY NOW</button>
                 <div className='flex justify-end items-center gap-1 lg:gap-4'>
@@ -52,35 +52,35 @@ const Landing = () => {
                 </div>
             </div>
             {/* </div> */}
-            <div id='home' className="flex justify-center items-center lg:mt-[60px]">
+            <div id='home' className="flex mt-[40px] justify-center items-center lg:mt-[60px]">
                 <img src={text} alt="" className='w-[90%] lg:w-auto' />
             </div>
-            <div className="flex justify-center relative items-center">
+            <div className="flex justify-center relative items-center pb-[100px] lg:pb-0">
                 {/* <Parallax speed={isDesktop ? -20 : -10} className="hidden lg:block">
                 <img src={shadow} alt="" className='hidden lg:block lg:w-auto' />
                 </Parallax> */}
                 <Parallax speed={isDesktop ? -30 : -10}>
                     <img src={hero} alt="" className='' />
                 </Parallax>
-                <button className="border-[2px] bottom-[0px] lg:bottom-16 absolute border-black rounded-[10px] translate transform origin-center rotate-[-5deg] py-[5px] lg:py-[10px] px-[10px] lg:px-[40px] text-[20px] bg-white transition-transform duration-300 ease-in-out scale-100 hover:scale-110">CA: wedq726w8asg2ubjdwr4q3e9wiq</button>
+                <button className="border-[2px] bottom-[15%] lg:bottom-16 absolute border-black rounded-[10px] translate transform origin-center rotate-[-5deg] py-[5px] lg:py-[10px] px-[10px] lg:px-[40px] lg:text-[20px] bg-white transition-transform duration-300 ease-in-out scale-100 hover:scale-110">CA: wedq726w8asg2ubjdwr4q3e9wiq</button>
             </div>
         </div>
         <div className="">
             <Slider />
         </div>
 
-        <div id='tokenomics' className="flex bg-[#E4FDE7] flex-col lg:flex-row mt-[40px] lg:mt-0 justify-center items-center px-4">
+        <div id='tokenomics' className="flex bg-[#E4FDE7] flex-col-reverse lg:flex-row  lg:mt-0 justify-center items-center px-4">
             <motion.div ref={ref3}
                 initial={{ opacity: 0, x: 100 }}
                 animate={{
                     opacity: inView3 ? 1 : 0,
                     x: inView3 ? 0 : 100,
                 }}
-                transition={{ duration: 0.5 }} className="w-full lg:w-[40%] flex flex-col items-start gap-[30px] pl-[8%]">
+                transition={{ duration: 0.5 }} className="w-full lg:w-[40%] flex flex-col items-start gap-[30px] lg:pl-[8%] pb-[50px] lg:pb-0">
                 <h1 className="text-[50px] lg:text-[70px] font-bold text-center text-black transform rotate-[-3deg]">TOKENOMICS</h1>
 
-                <div className='flex justify-start items-start'>
-                    <p className='text-[36px]'>LP: BURNED FOREVER <br />
+                <div className='flex justify-start items-center lg:items-start'>
+                    <p className='text-[36px] text-center lg:text-left'>LP: BURNED FOREVER <br />
                         TAX: 0/0 <br />
                         TICKER: $GOOMPER <br />
                         TEAM: 10% <br />
@@ -102,7 +102,7 @@ const Landing = () => {
 <div className='w-full h-[50px] border-y-[2px] border-black bg-secondary'>
 
 </div>
-        <div id='about' className="flex flex-col lg:flex-row justify-center items-center px-[8%] gap-[30px] pb-[4%]">
+        <div id='about' className="flex flex-col lg:flex-row justify-center items-center px-[8%] gap-[30px] pb-[10%] lg:pb-[4%]">
             <motion.div ref={ref1}
                 initial={{ opacity: 0, x: -100 }}
                 animate={{
@@ -136,10 +136,10 @@ const Landing = () => {
                 opacity: inView5 ? 1 : 0,
                 y: inView5 ? 0 : -100,
             }}
-            transition={{ duration: 0.5 }} className="flex justify-center items-center overflow-hidden h-[65vh]">
-            <div className="flex-col-reverse lg:flex-row flex justify-between items-end h-full  w-full">
-                <img src={footer} alt="" className='h-full w-[40%]' />
-                <div className="flex flex-col lg:pr-[160px] lg:pt-[50px]  h-full items-center lg:items-start justify-start  gap-[30px] lg:gap-[30px]">
+            transition={{ duration: 0.5 }} className="flex justify-center items-center overflow-hidden lg:h-[65vh]">
+            <div className="flex-col lg:flex-row flex justify-between lg:items-end h-full  w-full">
+                <img src={footer} alt="" className='h-full hidden lg:block lg:w-[40%]' />
+                <div className="flex flex-col lg:pr-[160px] lg:pt-[50px] h-full items-center lg:items-start justify-center lg:justify-start  gap-[30px] lg:gap-[30px]">
                     <h1 className='text-[40px] lg:text-[76px] tracking-widest'>JOIN THE <br />COMMUNITY </h1>
                     <div className="flex w-full flex-col lg:flex-row justify-center items-center gap-[20px] pb-[20px] lg:pb-0 lg:gap-[50px]">
                         <div className="flex justify-center items-center gap-3">
