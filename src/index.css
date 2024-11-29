@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hamburger-menu {
+  cursor: pointer;
+}
+
+.line {
+  width: 20px;
+  height: 3px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger-menu.open .line:nth-child(1) {
+  transform: rotate(-45deg) translate(6px, 12px);
+}
+
+.hamburger-menu.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.open .line:nth-child(3) {
+  transform: rotate(45deg) translate(6px, -12px);
+}
+
+.sliding-text-box {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sliding-text {
+  display: flex;
+  animation: slide 2s linear infinite; /* Adjust timing for smoothness */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start from the initial position */
+  }
+  100% {
+    transform: translateX(-50%); /* Slide halfway, covering the original set */
+  }
+}
+
+
+.text-with-border {
+  color: white;
+  text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black; /* Adjust color and size as needed */
+}
+
+.text-with-border2 {
+  color: white;
+  text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black; /* Adjust color and size as needed */
+}
