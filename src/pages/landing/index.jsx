@@ -17,9 +17,22 @@ import { Parallax } from "react-scroll-parallax";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useState } from 'react'
 
 const Landing = () => {
-    const isDesktop = useMediaQuery({ minWidth: 1024 });
+    const [buttonText, setButtonText] = useState(
+        "CA: AFTBJ1A6kUo8GEXwNc8v3uv3Fbm1xD7HKPTZg1idV36G"
+    );
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText("AFTBJ1A6kUo8GEXwNc8v3uv3Fbm1xD7HKPTZg1idV36G");
+        setButtonText("Copied!");
+
+        // Change back after 2 seconds
+        setTimeout(() => {
+            setButtonText("CA: AFTBJ1A6kUo8GEXwNc8v3uv3Fbm1xD7HKPTZg1idV36G");
+        }, 2000);
+    }; const isDesktop = useMediaQuery({ minWidth: 1024 });
     const { ref: ref3, inView: inView3 } = useInView({
         triggerOnce: false,
         threshold: 0.5,
@@ -66,7 +79,9 @@ const Landing = () => {
                 <Parallax speed={isDesktop ? -30 : -10}>
                     <img src={hero} alt="" className='hidden lg:block' />
                 </Parallax>
-                <button className="border-[2px] bottom-[15%] lg:bottom-16 absolute border-black rounded-[10px] translate transform origin-center rotate-[-5deg] py-[5px] lg:py-[10px] px-[10px] lg:px-[40px] lg:text-[20px] bg-white transition-transform duration-300 ease-in-out scale-100 hover:scale-110">CA: wedq726w8asg2ubjdwr4q3e9wiq</button>
+                <button className="border-[2px] bottom-[15%] lg:bottom-16 absolute border-black rounded-[10px] translate transform origin-center rotate-[-5deg] py-[5px] lg:py-[10px] px-[5px] lg:px-[40px] text-[13px] lg:text-[20px] bg-white transition-transform duration-300 ease-in-out scale-100 hover:scale-110" onClick={handleCopy}
+                >
+                    {buttonText}</button>
             </div>
         </div>
         <div className="">
@@ -103,9 +118,9 @@ const Landing = () => {
             </motion.div>
         </div>
 
-<div className='w-full h-[50px] border-y-[2px] border-black bg-secondary'>
+        <div className='w-full h-[50px] border-y-[2px] border-black bg-secondary'>
 
-</div>
+        </div>
         <div id='about' className="flex flex-col lg:flex-row justify-center items-center px-[8%] gap-[30px] pb-[10%] lg:pb-[4%]">
             <motion.div ref={ref1}
                 initial={{ opacity: 0, x: -100 }}
@@ -132,7 +147,7 @@ const Landing = () => {
                 </div>
             </motion.div>
         </div>
-<Slider />
+        <Slider />
 
         <motion.div ref={ref5}
             initial={{ opacity: 0, y: -100 }}
