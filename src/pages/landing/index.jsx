@@ -18,6 +18,7 @@ import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Landing = () => {
     const [buttonText, setButtonText] = useState(
@@ -60,9 +61,17 @@ const Landing = () => {
         <div className='overflow-hidden'>
             <img src={heroSmall} className='absolute hidden lg:block bottom-1 left-0' alt="" />
             <div className="flex justify-between items-center pt-[3%] px-[3%]">
-                <button className="border-[2px] border-black rounded-[5px] py-[6px] lg:py-[10px] px-[20px] lg:px-[50px] font-sigmar text-black bg-secondary transform transition-transform duration-300 ease-in-out scale-100 hover:scale-110">BUY NOW</button>
+                <Link to={'https://dexscreener.com/solana/FoARUsUmRo4S8zsBVsxoTB81RH1Qs697DfFBJjJpsEnF'}><button className="border-[2px] border-black rounded-[5px] py-[6px] lg:py-[10px] px-[20px] lg:px-[50px] font-sigmar text-black bg-secondary transform transition-transform duration-300 ease-in-out scale-100 hover:scale-110">BUY NOW</button></Link>
                 <div className='flex justify-end items-center gap-1 lg:gap-4'>
-                    <img src={x} alt="" className='w-[30px] h-[30px] lg:w-auto lg:h-auto' /><img src={dex} alt="" className='w-[30px] h-[30px] lg:w-auto lg:h-auto' /><img src={tg} alt="" className='w-[30px] h-[30px] lg:w-auto lg:h-auto' />
+                    <Link to={'https://x.com/goompermeme'}>
+                        <img src={x} alt="" className='w-[30px] h-[30px] lg:w-auto lg:h-auto' />
+                    </Link>
+                    <Link to={'https://dexscreener.com/solana/FoARUsUmRo4S8zsBVsxoTB81RH1Qs697DfFBJjJpsEnF'}>
+                        <img src={dex} alt="" className='w-[30px] h-[30px] lg:w-auto lg:h-auto' />
+                    </Link>
+                    <Link to={'https://t.me/goomperthesalamander'}>
+                        <img src={tg} alt="" className='w-[30px] h-[30px] lg:w-auto lg:h-auto' />
+                    </Link>
                 </div>
             </div>
             {/* </div> */}
@@ -143,7 +152,7 @@ const Landing = () => {
                     REWARD TO THE CRYPTO WORLD. REMEMBER  ‘’ LIFE IS A GAME PLAY EPIC
                     OR OLAY GOOMPER STYLE TO WIN’’. </p>
                 <div className="flex justify-center items-center gap-[20px] lg:gap-[50px]">
-                    <button className="border-[2px] rotate-[-6deg] border-black rounded-[5px] py-[6px] lg:py-[10px] px-[20px] lg:px-[50px] font-sigmar text-[20px] bg-secondary transform transition-transform duration-300 ease-in-out scale-100 hover:scale-110">BUY NOW</button>
+                    <Link to={'https://dexscreener.com/solana/FoARUsUmRo4S8zsBVsxoTB81RH1Qs697DfFBJjJpsEnF'}><button className="border-[2px] rotate-[-6deg] border-black rounded-[5px] py-[6px] lg:py-[10px] px-[20px] lg:px-[50px] font-sigmar text-[20px] bg-secondary transform transition-transform duration-300 ease-in-out scale-100 hover:scale-110">BUY NOW</button></Link>
                 </div>
             </motion.div>
         </div>
@@ -162,9 +171,9 @@ const Landing = () => {
                     <h1 className='text-[40px] text-center lg:text-left lg:text-[76px] tracking-widest'>JOIN THE <br />COMMUNITY </h1>
                     <div className="flex w-full flex-col lg:flex-row justify-center items-center gap-[20px] pb-[20px] lg:pb-0 lg:gap-[50px]">
                         <div className="flex justify-center items-center gap-3">
-                            <img src={tg} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" />
-                            <img src={x} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" />
-                            <img src={dex} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" />
+                            <Link to={'https://t.me/goomperthesalamander'}><img src={tg} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
+                            <Link to={'https://x.com/goompermeme'}><img src={x} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
+                            <Link to={'https://dexscreener.com/solana/FoARUsUmRo4S8zsBVsxoTB81RH1Qs697DfFBJjJpsEnF'}><img src={dex} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
                         </div>
                     </div>
                 </div>
