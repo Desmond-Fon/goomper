@@ -173,7 +173,7 @@ const Landing = () => {
                         <div className="flex justify-center items-center gap-3">
                             <Link to={'https://t.me/goomperthesalamander'}><img src={tg} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
                             <Link to={'https://x.com/goompermeme'}><img src={x} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
-                            <Link to={'https://dexscreener.com/solana/FoARUsUmRo4S8zsBVsxoTB81RH1Qs697DfFBJjJpsEnF'}><img src={dex} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
+                            <Link to={'https://www.dextools.io/app/en/solana/pair-explorer/FoARUsUmRo4S8zsBVsxoTB81RH1Qs697DfFBJjJpsEnF'}><img src={dex} alt="" className="transform transition-transform duration-300 ease-in-out scale-100 cursor-pointer hover:scale-110" /></Link>
                         </div>
                     </div>
                 </div>
